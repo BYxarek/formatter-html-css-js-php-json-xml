@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн форматировщик вашего html, css, php, js, json, xml кода." />
+    <meta name="robots" content="follow, index">
+    <meta name="author" content="GitHub: BYxarek">
+    <meta name="keywords" content="Форматировщик, форматер, хтм, ксс, пхп, джсон, хмл, джава скрипт, онлайн, сервис, форматирование">
+    <title>Форматировщик кода</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/material.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <base href="https://formatter.loc/">
+</head>
+<body>
+    <div class="container">
+        <h1>Форматировщик кода</h1>
+        <div class="info">
+            <p>Этот форматировщик поддерживает следующие типы кода:</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>JSON</li>
+                <li>XML</li>
+            </ul>
+        </div> <textarea id="codeInput" placeholder="Введите код..."></textarea> <button onclick="formatCode()">Форматировать</button>
+        <h2>Отформатированный код:</h2>
+        <pre id="formattedOutput"></pre> <button onclick="copyToClipboard()">Скопировать код</button>
+        <div id="notification" class="notification">Код скопирован в буфер обмена!</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/php/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-json.min.js"></script>
+    <script src="../main.js"></script>
+    <noscript>Извините, ваш браузер не поддерживает JavaScript либо он у вас отключён!</noscript>
+</body>
+</html>
